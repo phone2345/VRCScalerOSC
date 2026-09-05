@@ -15,19 +15,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET 9
+      - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore dependencies
         run: dotnet restore
 
       - name: Publish Windows Desktop (win-x64 - Single File R2R)
-        run: dotnet publish -c Release -f net9.0-windows7.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Windows/VRCScalerOSC_Windows.csproj -o ./publish/windows-desktop
+        run: dotnet publish -c Release -f net10.0-windows7.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Windows/VRCScalerOSC_Windows.csproj
 
       - name: Publish Windows Console (win-x64 - Single File R2R with Trimming)
-        run: dotnet publish -c Release -f net9.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj -o ./publish/win-x64
+        run: dotnet publish -c Release -f net10.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj
 
       - name: Create packages directory
         run: mkdir packages
@@ -143,10 +143,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET 9
+      - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore Core library
         run: dotnet restore VRCScalerOSC/VRCScalerOSC.csproj
@@ -155,7 +155,7 @@ jobs:
         run: dotnet restore VRCScalerOSC_Console/VRCScalerOSC_Console.csproj
 
       - name: Publish Linux Console (linux-x64 - Single File R2R with Trimming)
-        run: dotnet publish -c Release -f net9.0 -r linux-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj -o ./publish/linux-x64
+        run: dotnet publish -c Release -f net10.0 -r linux-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj
 
       - name: Create packages directory
         run: mkdir -p packages
