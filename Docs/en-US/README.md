@@ -255,8 +255,7 @@ Parameter names in the table omit the path prefix (/avatar/parameters/VRCScaleOS
 | /Input/Jump | T/F | W | Player jump state (Reset to F manually after setting T) |
 | /Input/LookHorizontal | f | W | View horizontal rotation (positive: right, negative: left)<br>Large rotation also rotates the body. |
 | /Input/LookVertical | f | W | View vertical rotation (positive: up, negative: down)<br>Stops at 90 degrees. |
-| /Input/UseRight | T/F | W | Using objects with the right hand (e.g. taking object, get into station)<br>Set it to **T**, and it will automatically switch back to **F** after 0.5 seconds.
-  |
+| /Input/UseRight | T/F | W | Using objects with the right hand (e.g. taking object, get into station)<br>Set it to **T**, and it will automatically switch back to **F** after 0.5 seconds. |
 | /Input/UseLeft | T/F | W | Using objects with the left hand. Same as UseRight |
 |  |  |  | These six parameters can be used for player interaction gimmicks (e.g. being launched by giant footsteps, having your view rotated while grabbed). |
 | /StopScaling | T | W | Stop scaling immediately |
