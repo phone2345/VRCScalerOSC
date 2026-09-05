@@ -13,7 +13,7 @@ VRC Scaler OSC is a utility application for changing avatar height in VRChat by 
 
 ### **1.2 Program Version**
 
-* Program written in .NET 9 C#, using self-developed OSC packet handling packages and [VRC OSC Query](https://github.com/vrchat-community/vrc-oscquery-lib)
+* Program written in C#, using self-developed OSC packet handling packages and [VRC OSC Query](https://github.com/vrchat-community/vrc-oscquery-lib)
 * Desktop (Windows) version: Chinese, English, Japanese, and Korean interfaces, compatible with Windows 10 and above
 * Command-line (Console) version: English interface, compatible with Windows and Linux 64-bit operating systems
 * Planned to be open-sourced under MIT license. If your system doesn't support it, you can compile or modify it from source code yourself.
@@ -255,7 +255,10 @@ Parameter names in the table omit the path prefix (/avatar/parameters/VRCScaleOS
 | /Input/Jump | T/F | W | Player jump state (Reset to F manually after setting T) |
 | /Input/LookHorizontal | f | W | View horizontal rotation (positive: right, negative: left)<br>Large rotation also rotates the body. |
 | /Input/LookVertical | f | W | View vertical rotation (positive: up, negative: down)<br>Stops at 90 degrees. |
-|  |  |  | These four parameters can be used for player interaction gimmicks (e.g. being launched by giant footsteps, having your view rotated while grabbed). |
+| /Input/UseRight | T/F | W | Using objects with the right hand (e.g. taking object, get into station)<br>Set it to **T**, and it will automatically switch back to **F** after 0.5 seconds.
+  |
+| /Input/UseLeft | T/F | W | Using objects with the left hand. Same as UseRight |
+|  |  |  | These six parameters can be used for player interaction gimmicks (e.g. being launched by giant footsteps, having your view rotated while grabbed). |
 | /StopScaling | T | W | Stop scaling immediately |
 | /AvatarDefaultHeight | f | R | Get avatar default height |
 | /BackAvatarDefaultHeight | T | W | Immediately scale to avatar default height |
