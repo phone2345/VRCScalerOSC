@@ -13,16 +13,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET 9
+      - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore dependencies
         run: dotnet restore
 
       - name: Build Windows Desktop
-        run: dotnet build -c Release -f net9.0-windows7.0 VRCScalerOSC_Windows/VRCScalerOSC_Windows.csproj
+        run: dotnet build -c Release -f net10.0-windows7.0 VRCScalerOSC_Windows/VRCScalerOSC_Windows.csproj
 
       - name: Build Console
         run: dotnet build -c Release VRCScalerOSC_Console/VRCScalerOSC_Console.csproj
@@ -37,10 +37,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Setup .NET 9
+      - name: Setup .NET 10
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '9.0.x'
+          dotnet-version: '10.0.x'
 
       - name: Restore Core library
         run: dotnet restore VRCScalerOSC/VRCScalerOSC.csproj
