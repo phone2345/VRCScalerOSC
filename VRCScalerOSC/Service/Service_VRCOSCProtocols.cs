@@ -1,8 +1,9 @@
-﻿using System.Diagnostics;
-using System.Net.Sockets;
-using System.Net;
-using System.Text;
+﻿using System.Collections.Concurrent;
+using System.Diagnostics;
 using System.IO.Hashing;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
 using System.Threading.Channels;
 using VRCScalerOSC.Model;
 
@@ -46,11 +47,11 @@ namespace VRCScalerOSC.Service
         private readonly IPEndPoint? SendPEndPoint;
 
         public bool IsActive = false;
-        private readonly Dictionary<ulong, ulong> _tempCache;
+        private readonly ConcurrentDictionary<ulong, ulong> _tempCache = new();
         public Service_VRCOSCProtocols(string RemoteIp = "", int SendPort = 9000, int ListenPort = 9001, int SendTaskDelay = 5)
         {
-            _channelReceiveTask = Channel.CreateUnbounded<OSCDataEventArgs>();
-            _channelSendTask = Channel.CreateUnbounded<OSCDataEventArgs>();
+            _channelReceiveTask = Channel.CreateBounded<OSCDataEventArgs>(new BoundedChannelOptions(1000) { FullMode = BoundedChannelFullMode.DropNewest });
+            _channelSendTask = Channel.CreateBounded<OSCDataEventArgs>(new BoundedChannelOptions(1000) { FullMode = BoundedChannelFullMode.DropNewest });
             _sendTaskDelay = SendTaskDelay;
             _tempCache = [];
             LocalIp = IPAddress.Any;
@@ -143,17 +144,15 @@ namespace VRCScalerOSC.Service
         {
             Stop();
         }
+
         private void IgnoreAddrListUpdate()
         {
             if (_ignoreAddrListTemp != null)
             {
                 _ignoreAddrList = _ignoreAddrListTemp.Keys.ToList()
-                .Select(p => XxHash64.HashToUInt64(Encoding.UTF8.GetBytes(p)))
-                .ToHashSet();
-                lock (_tempCache)
-                {
-                    _tempCache?.Clear();
-                }
+                    .Select(p => XxHash64.HashToUInt64(Encoding.UTF8.GetBytes(p)))
+                    .ToHashSet();
+                _tempCache?.Clear();
             }
         }
         public bool IgnoreAddrListContainsKey(string addr)

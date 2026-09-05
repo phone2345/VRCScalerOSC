@@ -12,7 +12,7 @@ namespace VRCScalerOSC.Controller
     {
         private readonly Service_VRCOSCQuery _serviceOSCQuery = new();
         private Service_VRCOSCProtocols? _serviceOSCProtocols;
-        private OscEventCollection _actionAfterGetOSCData;
+        private OscEventCollection _actionAfterGetOSCData = new();
         public event Service_VRCOSCProtocols.EventHandler? OSCDataSanded
         {
             add
@@ -136,6 +136,15 @@ namespace VRCScalerOSC.Controller
             ];
 
             viewModel.PropertyChanged += ViewModel_PropertyChanged;
+        }
+
+        public void Dispose()
+        {
+            if (_serviceOSCProtocols != null)
+            {
+                _serviceOSCProtocols.OSCDataSanded -= null;
+                _serviceOSCProtocols.OSCDataReceived -= null;
+            }
         }
         private void ViewModel_PropertyChanged(object? sender, System.ComponentModel.PropertyChangedEventArgs e)
         {

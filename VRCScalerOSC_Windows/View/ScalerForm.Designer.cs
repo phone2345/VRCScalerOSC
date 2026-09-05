@@ -275,11 +275,11 @@
             // 
             // buttonResetHeight
             // 
-            buttonResetHeight.Dock = DockStyle.Top;
+            buttonResetHeight.Dock = DockStyle.Fill;
             buttonResetHeight.Location = new Point(181, 0);
             buttonResetHeight.Margin = new Padding(0);
             buttonResetHeight.Name = "buttonResetHeight";
-            buttonResetHeight.Size = new Size(183, 30);
+            buttonResetHeight.Size = new Size(183, 32);
             buttonResetHeight.TabIndex = 25;
             buttonResetHeight.Text = "Reset Height";
             buttonResetHeight.UseVisualStyleBackColor = true;
@@ -295,7 +295,7 @@
             groupBoxHeight.Location = new Point(3, 4);
             groupBoxHeight.Margin = new Padding(3, 4, 3, 4);
             groupBoxHeight.Name = "groupBoxHeight";
-            groupBoxHeight.Padding = new Padding(3, 4, 3, 4);
+            groupBoxHeight.Padding = new Padding(3, 2, 3, 4);
             groupBoxHeight.Size = new Size(370, 64);
             groupBoxHeight.TabIndex = 28;
             groupBoxHeight.TabStop = false;
@@ -305,7 +305,7 @@
             // 
             buttonHeightRange.BackgroundImage = (Image)resources.GetObject("buttonHeightRange.BackgroundImage");
             buttonHeightRange.BackgroundImageLayout = ImageLayout.Zoom;
-            buttonHeightRange.Font = new Font("微軟正黑體", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            buttonHeightRange.Font = new Font("Microsoft JhengHei", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
             buttonHeightRange.Location = new Point(332, 0);
             buttonHeightRange.Margin = new Padding(0);
             buttonHeightRange.Name = "buttonHeightRange";
@@ -318,8 +318,8 @@
             // 
             labelHeightRange.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             labelHeightRange.AutoSize = true;
-            labelHeightRange.Font = new Font("微軟正黑體", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
-            labelHeightRange.Location = new Point(183, 6);
+            labelHeightRange.Font = new Font("Microsoft JhengHei", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            labelHeightRange.Location = new Point(183, 4);
             labelHeightRange.Name = "labelHeightRange";
             labelHeightRange.Size = new Size(138, 16);
             labelHeightRange.TabIndex = 1;
@@ -335,12 +335,12 @@
             tableLayoutPanel3.Controls.Add(buttonResetHeight, 2, 0);
             tableLayoutPanel3.Controls.Add(comboBoxIsMultiplier, 1, 0);
             tableLayoutPanel3.Dock = DockStyle.Fill;
-            tableLayoutPanel3.Location = new Point(3, 30);
+            tableLayoutPanel3.Location = new Point(3, 28);
             tableLayoutPanel3.Margin = new Padding(0);
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
-            tableLayoutPanel3.Size = new Size(364, 30);
+            tableLayoutPanel3.Size = new Size(364, 32);
             tableLayoutPanel3.TabIndex = 0;
             // 
             // panel1
@@ -351,7 +351,7 @@
             panel1.Location = new Point(0, 0);
             panel1.Margin = new Padding(0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(116, 30);
+            panel1.Size = new Size(116, 32);
             panel1.TabIndex = 35;
             // 
             // panel2
@@ -360,7 +360,7 @@
             panel2.Dock = DockStyle.Right;
             panel2.Location = new Point(86, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(30, 30);
+            panel2.Size = new Size(30, 32);
             panel2.TabIndex = 30;
             // 
             // buttonComboEyeHeight
@@ -369,7 +369,7 @@
             buttonComboEyeHeight.Location = new Point(0, 0);
             buttonComboEyeHeight.Margin = new Padding(0);
             buttonComboEyeHeight.Name = "buttonComboEyeHeight";
-            buttonComboEyeHeight.Size = new Size(30, 31);
+            buttonComboEyeHeight.Size = new Size(30, 32);
             buttonComboEyeHeight.TabIndex = 29;
             buttonComboEyeHeight.Text = "▼";
             buttonComboEyeHeight.UseVisualStyleBackColor = true;
@@ -392,7 +392,7 @@
             // 
             // comboBoxIsMultiplier
             // 
-            comboBoxIsMultiplier.Dock = DockStyle.Fill;
+            comboBoxIsMultiplier.Dock = DockStyle.Top;
             comboBoxIsMultiplier.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxIsMultiplier.FormattingEnabled = true;
             comboBoxIsMultiplier.Items.AddRange(new object[] { "公尺", "倍" });
@@ -476,7 +476,7 @@
             buttonComboScalingTime.Location = new Point(0, 0);
             buttonComboScalingTime.Margin = new Padding(0);
             buttonComboScalingTime.Name = "buttonComboScalingTime";
-            buttonComboScalingTime.Size = new Size(30, 31);
+            buttonComboScalingTime.Size = new Size(30, 32);
             buttonComboScalingTime.TabIndex = 29;
             buttonComboScalingTime.Text = "▼";
             buttonComboScalingTime.UseVisualStyleBackColor = true;
@@ -548,7 +548,7 @@
             // 
             checkBoxOSCRandomReceiverPort.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             checkBoxOSCRandomReceiverPort.AutoSize = true;
-            checkBoxOSCRandomReceiverPort.Font = new Font("微軟正黑體", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            checkBoxOSCRandomReceiverPort.Font = new Font("Microsoft JhengHei", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
             checkBoxOSCRandomReceiverPort.Location = new Point(212, 5);
             checkBoxOSCRandomReceiverPort.Name = "checkBoxOSCRandomReceiverPort";
             checkBoxOSCRandomReceiverPort.Size = new Size(152, 20);
@@ -667,7 +667,7 @@
             // labelSCS
             // 
             labelSCS.Dock = DockStyle.Fill;
-            labelSCS.Font = new Font("微軟正黑體", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            labelSCS.Font = new Font("Microsoft JhengHei", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
             labelSCS.Location = new Point(0, 0);
             labelSCS.Margin = new Padding(0);
             labelSCS.Name = "labelSCS";
@@ -861,7 +861,7 @@
             // 
             // contextMenuStripFormSize
             // 
-            contextMenuStripFormSize.Font = new Font("微軟正黑體", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            contextMenuStripFormSize.Font = new Font("Microsoft JhengHei", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 136);
             contextMenuStripFormSize.Items.AddRange(new ToolStripItem[] { toolStripMenuItemFormSize1x, toolStripMenuItemFormSize2x, toolStripMenuItemFormSize3x, toolStripMenuItemFormSize4x });
             contextMenuStripFormSize.Name = "contextMenuStripFormSize";
             contextMenuStripFormSize.Size = new Size(120, 156);
@@ -1132,13 +1132,13 @@
             buttonSet18.UseVisualStyleBackColor = true;
             buttonSet18.Click += buttonLiteScaler_Click;
             // 
-            // checkBoxRealtime
+            // checkBoxInstant
             // 
             checkBoxInstant.Dock = DockStyle.Fill;
             checkBoxInstant.ForeColor = Color.Blue;
             checkBoxInstant.Location = new Point(626, 62);
             checkBoxInstant.Margin = new Padding(3, 2, 3, 2);
-            checkBoxInstant.Name = "checkBoxRealtime";
+            checkBoxInstant.Name = "checkBoxInstant";
             checkBoxInstant.Size = new Size(123, 56);
             checkBoxInstant.TabIndex = 32;
             checkBoxInstant.Text = "Real-time";
@@ -1482,7 +1482,7 @@
             flowLayoutPanelAvatarHeight.Controls.Add(labelGetWristInfoFailed);
             flowLayoutPanelAvatarHeight.Controls.Add(labelAvatarScalingDisabled);
             flowLayoutPanelAvatarHeight.Dock = DockStyle.Fill;
-            flowLayoutPanelAvatarHeight.Font = new Font("微軟正黑體", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            flowLayoutPanelAvatarHeight.Font = new Font("Microsoft JhengHei", 9F, FontStyle.Regular, GraphicsUnit.Point, 136);
             flowLayoutPanelAvatarHeight.Location = new Point(0, 0);
             flowLayoutPanelAvatarHeight.Margin = new Padding(0);
             flowLayoutPanelAvatarHeight.Name = "flowLayoutPanelAvatarHeight";
@@ -1637,7 +1637,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(764, 341);
             Controls.Add(splitContainer1);
-            Font = new Font("微軟正黑體", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 136);
+            Font = new Font("Microsoft JhengHei", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 136);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Margin = new Padding(4);
             MaximizeBox = false;
