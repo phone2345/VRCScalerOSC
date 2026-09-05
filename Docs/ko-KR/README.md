@@ -13,7 +13,7 @@ VRC Scaler OSC는 VRChat에서 아바타 신장을 변경하기 위한 도구 �
 
 ### **1.2 프로그램 버전**
 
-* 프로그램은 .NET 9 C#으로 작성되었으며, 자체 개발한 OSC 패킷 처리 패키지 및 [VRC OSC Query](https://github.com/vrchat-community/vrc-oscquery-lib)를 사용합니다
+* 프로그램은 C#으로 작성되었으며, 자체 개발한 OSC 패킷 처리 패키지 및 [VRC OSC Query](https://github.com/vrchat-community/vrc-oscquery-lib)를 사용합니다
 * 데스크톱 (Windows) 버전: 중국어, 영어, 일본어, 한국어 인터페이스, Windows 10 이상 OS 지원
 * 명령줄 (Console) 버전: 영어 인터페이스, Windows 및 Linux 64비트 OS 지원
 * MIT 라이선스 하에서 오픈소스화할 예정입니다. 시스템이 지원하지 않는 경우 소스 코드에서 직접 컴파일하거나 수정할 수 있습니다.
@@ -255,7 +255,9 @@ VRC Scaler OSC 응용 프로그램은 사용자 프로필을 통해 화면의 �
 | /Input/Jump | T/F | W | 플레이어 점프 상태(T 설정 후 직접 F로 변경 필요) |
 | /Input/LookHorizontal | f | W | 시점 좌우 회전(양수: 오른쪽, 음수: 왼쪽)<br>크게 회전하면 몸도 회전합니다. |
 | /Input/LookVertical | f | W | 시점 상하 회전(양수: 위, 음수: 아래)<br>90도에서 정지합니다. |
-|  |  |  | 설명: 위 4개 파라미터는 플레이어 기믹 개발에 사용할 수 있습니다(예: 거대한 발걸음에 날아가기, 머리를 잡고 시점 회전 등). |
+| /Input/UseRight | T/F | W | 오른손으로 오브젝트 사용 (예: 오브젝트를 집거나 역에 들어가기)<br>**T**로 설정하면 0.5초 후 자동으로 **F**로 돌아갑니다. |
+| /Input/UseLeft | T/F | W | 왼손으로 오브젝트 사용. UseRight와 동일합니다. |
+|  |  |  | 설명: 위 6개 파라미터는 플레이어 기믹 개발에 사용할 수 있습니다(예: 거대한 발걸음에 날아가기, 머리를 잡고 시점 회전 등). |
 | /StopScaling | T | W | 스케일링을 즉시 중지합니다 |
 | /AvatarDefaultHeight | f | R | 아바타 기본 신장을 가져옵니다 |
 | /BackAvatarDefaultHeight | T | W | 즉시 아바타 기본 신장으로 스케일링합니다 |
