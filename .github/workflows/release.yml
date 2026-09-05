@@ -24,10 +24,10 @@ jobs:
         run: dotnet restore
 
       - name: Publish Windows Desktop (win-x64 - Single File R2R)
-        run: dotnet publish -c Release -f net10.0-windows7.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Windows/VRCScalerOSC_Windows.csproj
+        run: dotnet publish -c Release -f net10.0-windows7.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Windows/VRCScalerOSC_Windows.csproj -o ./publish/windows-desktop
 
       - name: Publish Windows Console (win-x64 - Single File R2R with Trimming)
-        run: dotnet publish -c Release -f net10.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj
+        run: dotnet publish -c Release -f net10.0 -r win-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj -o ./publish/win-x64
 
       - name: Create packages directory
         run: mkdir packages
@@ -155,7 +155,7 @@ jobs:
         run: dotnet restore VRCScalerOSC_Console/VRCScalerOSC_Console.csproj
 
       - name: Publish Linux Console (linux-x64 - Single File R2R with Trimming)
-        run: dotnet publish -c Release -f net10.0 -r linux-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj
+        run: dotnet publish -c Release -f net10.0 -r linux-x64 --self-contained -p:PublishSingleFile=true -p:PublishTrimmed=true -p:DebugType=none -p:DebugSymbols=false VRCScalerOSC_Console/VRCScalerOSC_Console.csproj -o ./publish/linux-x64
 
       - name: Create packages directory
         run: mkdir -p packages
