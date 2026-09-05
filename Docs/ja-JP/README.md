@@ -13,7 +13,7 @@ VRC Scaler OSC は、VRChat でアバター身長を変更するためのツー�
 
 ### **1.2 プログラム バージョン**
 
-* プログラムは .NET 9 C# で記述され、自社開発の OSC パケット処理パッケージおよび [VRC OSC Query](https://github.com/vrchat-community/vrc-oscquery-lib) を使用します
+* プログラムは C# で記述され、自社開発の OSC パケット処理パッケージおよび [VRC OSC Query](https://github.com/vrchat-community/vrc-oscquery-lib) を使用します
 * デスクトップ (Windows) 版: 中国語、英語、日本語、韓国語インターフェース、Windows 10 以上の OS に対応
 * コマンドライン (Console) 版: 英語インターフェース、Windows および Linux 64 ビット OS に対応
 * MIT ライセンスの下でオープンソース化する予定です。システムがサポートしていない場合は、ソースコードから自分でコンパイルまたは変更できます。
@@ -255,7 +255,9 @@ VRC Scaler OSC アプリケーションは、ユーザー プロファイルを�
 | /Input/Jump | T/F | W | プレイヤージャンプ状態（T後に手動でFへ戻す必要があります） |
 | /Input/LookHorizontal | f | W | 視点左右回転（正：右、負：左）<br>大きく回すと身体も回転します |
 | /Input/LookVertical | f | W | 視点上下回転（正：上、負：下）<br>90度で停止します。 |
-|  |  |  | 上記4つのパラメータはプレイヤーギミック開発に使用できます（例：巨大な足踏みで吹き飛ぶ、頭を掴まれて視点が回る等） |
+| /Input/UseRight | T/F | W | 右手でオブジェクトを使用します（例：オブジェクトを持つ、Stationに入るなど）<br>**T** に設定すると、0.5秒後に自動的に **F** に戻ります。 |
+| /Input/UseLeft | T/F | W | 左手でオブジェクトを使用します。UseRightと同じです。 |
+|  |  |  | 上記6つのパラメータはプレイヤーギミック開発に使用できます（例：巨大な足踏みで吹き飛ぶ、頭を掴まれて視点が回る等） |
 | /StopScaling | T | W | スケーリングをすぐに停止します |
 | /AvatarDefaultHeight | f | R | アバター デフォルト身長を取得します |
 | /BackAvatarDefaultHeight | T | W | すぐにアバター デフォルト身長にスケーリングします |
