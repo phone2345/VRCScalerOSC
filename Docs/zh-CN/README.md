@@ -13,7 +13,7 @@ VRC Scaler OSC 是用于改变VRChat中avatar身高的工具应用程式，经�
 
 ### **1.2 程式版本**  
 
-* 程式以.NET 9 C\#撰写，使用自主开发的OSC封包处理套件及[VRC OSC Query](https://github.com/vrchat-c​​ommunity/vrc-oscquery-lib)  
+* 程式以C\#撰写，使用自主开发的OSC封包处理套件及[VRC OSC Query](https://github.com/vrchat-c​​ommunity/vrc-oscquery-lib)  
 * 桌面(Windows)版本: 中英日韩介面，适用于Windows 10以上作业系统  
 * 命令列(Console)版本: 英文介面，适用于Windows 及Linux 64位元作业系统  
 * 预计以MIT授权开源，若使用的系统不支援可自行从原始码编译或改写。  
@@ -254,7 +254,9 @@ VRC Scaler OSC应用程式可经由用户设定档来调整画面中的预设值
 | /Input/Jump | T/F | W | 玩家跳跃(设为T后须自行重设为F) |
 | /Input/LookHorizontal | f | W | 玩家视角水平转动(正数向右，负数向左)<br>当视角过大时会带动身体转动 |
 | /Input/LookVertical | f | W | 玩家视角上下转动(正数向上，负数向下)<br>当视角达到90度后会停止 |
-|  |  |  | 说明: 上面四个参数可用于开发玩家互动效果，例如被巨大的踏步震飞(跳跃)、被抓着头转动视角 |
+| /Input/UseRight | T/F | W | 玩家右手使用物件，例如抓物件或进入station<br>设为T后0.5秒将自动设为F |
+| /Input/UseLeft | T/F | W | 玩家左手使用物件，同上 |
+|  |  |  | 说明: 上面六个参数可用于开发玩家互动效果，例如被巨大的踏步震飞(跳跃)、被抓着头转动视角 |
 | /StopScaling | T | W | 立刻停止缩放 |  
 | /AvatarDefaultHeight | f | R | 取得avatar预设身高 |  
 | /BackAvatarDefaultHeight  | T | W | 即时缩放至avatar预设身高 |  
