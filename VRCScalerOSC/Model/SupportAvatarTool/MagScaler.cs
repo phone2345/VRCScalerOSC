@@ -400,6 +400,7 @@ namespace VRCScalerOSC.Model.SupportAvatarTool
                     return (IsInitialized, service, data) =>
                     {
                         SetScale(data.ValueI, NewScaleParameterMapping, NewScale1xIndex);
+                        service?.SendOscMessage(new OSCData("/avatar/parameters/" + param, data.TypeString, NewScale1xIndex));
                     };
                 }
                 else if (param.Contains("LowerScale3"))
@@ -449,6 +450,7 @@ namespace VRCScalerOSC.Model.SupportAvatarTool
                     return (IsInitialized, service, data) =>
                     {
                         SetScale(data.ValueI, OldScaleParameterMapping, OldScale1xIndex);
+                        service?.SendOscMessage(new OSCData("/avatar/parameters/" + param, data.TypeString, OldScale1xIndex));
                     };
                 }
                 else if (param.Contains("Smaller"))
